@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+categories = ['Housing Properties', 'Land Properties']
+categories.each do |n|
+  Category.create!(prop_type: n)
+end

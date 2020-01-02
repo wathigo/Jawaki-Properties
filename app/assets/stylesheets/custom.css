@@ -8,7 +8,6 @@ body{
 /* navigation bar */
 
 nav{
-  position: absolute;
   top: 1.1em;
   z-index: 1;
   color: #fff;
@@ -45,15 +44,47 @@ nav img {
   margin-left: 5vw;
 }
 
+.logo i{
+  color: rgba(221,174,10,1);
+  margin-right: 0.5em;
+}
+
 .landing-page{
   background:
     linear-gradient(
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.3)
     ),
-    url(home.png);
+    url(home.jpg);
     background-size: cover;
-    position: absolute;
     width: 100vw;
     height: 100vh;
+}
+
+h1{
+  width: 40%;
+  margin: 0 auto;
+  color: #fff;
+}
+
+h3{
+  width: 20%;
+  margin: 20vh auto 1vh auto;
+  color: #fff;
+}
+
+/* categories */
+.category {
+  width: 70vw;
+  margin: 0 auto;
+  height: 10vh;
+  background-color: rgba(221,174,10,1);
+  margin-top: 15vh;
+}
+
+.category-dropdown{
+  width: 50%;
+  margin-left: 25%;
+  height: 70%;
+  margin-top: 0.82em;
 }

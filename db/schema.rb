@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2019_12_18_121023) do
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string "type"
+    t.string "prop_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

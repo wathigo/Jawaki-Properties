@@ -1,0 +1,7 @@
+<div class="category">
+  <select class="category-dropdown">
+    <%= Category.all.each do |category| %>
+      <option value=""><%= category.prop_type %></option>
+    <% end %>
+</select>
+</div>
