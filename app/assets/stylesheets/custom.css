@@ -43,6 +43,10 @@ nav img {
   margin-left: 5vw;
 }
 
+body > nav{
+  color: #000;
+}
+
 .logo i{
   color: rgba(221,174,10,1);
   margin-right: 0.5em;
@@ -144,4 +148,15 @@ h2{
   width: 45%;
   float: right;
   margin-top: 11%;
+}
+
+.more-btn{
+  display: inline-block;
+  margin-left: 45vw;
+  background-color: rgba(221,174,10,1);
+  padding: 1em;
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 1.5em;
+  border-radius: 0.5em;
 }

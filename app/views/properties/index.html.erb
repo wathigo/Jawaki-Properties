@@ -1,31 +1,11 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Properties</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="property-container">
+  <h2>ALL PROPERTIES LISTINGS</h2>
+  <div class="properties">
     <% @properties.each do |property| %>
-      <tr>
-        <td><%= property.name %></td>
-        <td><%= property.address %></td>
-        <td><%= property.price %></td>
-        <td><%= property.category.prop_type %></td>
-        <td><%= link_to 'Show', property %></td>
-        <td><%= link_to 'Edit', edit_property_path(property) %></td>
-        <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <%= render 'property', property: property %>
     <% end %>
-  </tbody>
-</table>
+  </div>
+</div>
 
 <br>
 

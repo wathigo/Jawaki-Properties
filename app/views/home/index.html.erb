@@ -1,4 +1,5 @@
 <div class="home-page">
   <%= render 'landing_page' %>
   <%= render 'properties_list', properties: overview_prop %>
+  <%= link_to 'VIEW MORE', properties_path, method: :get, class: "more-btn"%>
 </div>
