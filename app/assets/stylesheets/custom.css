@@ -54,7 +54,7 @@ body > .main-nav{
   background-color: inherit;
 }
 
-.logo i{
+.home-icon{
   color: rgba(221,174,10,1);
   margin-right: 0.5em;
   font-size: 1.5em;
@@ -106,13 +106,13 @@ h3{
 
 /* properties */
 
-.property-container{
+.property-container, .reasons-container{
   width: 80%;
   margin: 0 auto;
 
 }
 
-.properties{
+.properties, .reasons{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -181,4 +181,26 @@ h2{
 .pagy-nav a:hover{
   background-color: rgba(221,174,10,1);
   color: #fff;
+}
+
+.reason{
+  width: 30%;
+}
+
+.reason-heading{
+  color: #000;
+  font-size: 1.3em;
+}
+
+.reason-icon{
+  font-size: 4em;
+  width: 18%;
+  margin-top: 0.7em;
+  color: rgba(221,174,10,1);
+}
+
+.fl-right{
+  float: right;
+  display: inline-block;
+  width: 80%
 }

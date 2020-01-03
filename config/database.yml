@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: jawaki-properties_production
+  database: jawaki_properties_production
   username: jawaki-properties
   password: <%= ENV['JAWAKI-PROPERTIES_DATABASE_PASSWORD'] %>
