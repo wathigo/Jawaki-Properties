@@ -25,7 +25,7 @@ categories.each do |category|
   points = random_point
   random_latt = points[0]
   random_long = points[1]
-  4.times do |n|
+  8.times do |n|
     category.properties.create!(
       name: Faker::Name.unique.name,
       address: Faker::Games::WorldOfWarcraft.quote,
