@@ -1,10 +1,11 @@
-<div class="property-container">
+<div class="property-container all-properties">
   <h2>ALL PROPERTIES LISTINGS</h2>
   <div class="properties">
     <% @properties.each do |property| %>
       <%= render 'property', property: property %>
     <% end %>
   </div>
+  <%== pagy_nav(@pagy) %>
 </div>
 
 <br>

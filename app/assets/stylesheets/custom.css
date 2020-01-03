@@ -5,22 +5,25 @@ body{
   margin: 0 !important;
 }
 
-/* navigation bar */
+/* .main-navigation bar */
 
-nav{
+.main-nav{
   padding: 3vh 3vw 0  0;
   color: #fff;
   font-weight: bold;
-  height: 3em;
+  height: 10vh;
+  z-index: 2;
+  position: absolute;
+  top: 0;
 }
 
-nav ul{
+.main-nav ul{
   margin: 0;
   padding: 0;
   display: inline-block;
 }
 
-nav ul li{
+.main-nav ul li{
   list-style: none;
   display: inline-block;
   padding-right: 2em;
@@ -28,7 +31,7 @@ nav ul li{
   line-height: 1.5em;
 }
 
-nav span {
+.main-nav span {
   margin-right: 5vw;
   margin-left: 5vw;
   height: 1.5em;
@@ -36,15 +39,19 @@ nav span {
   font-size: 2em;
 }
 
-nav img {
+.main-nav img {
   width: 1.5em;
   height: 1.5em;
   line-height: 1.5em;
   margin-left: 5vw;
 }
 
-body > nav{
+body > .main-nav{
   color: #000;
+}
+
+.home:hover{
+  background-color: inherit;
 }
 
 .logo i{
@@ -69,7 +76,7 @@ body > nav{
   width: 50%;
   margin: 0 auto;
   text-align: center;
-  margin-top: 20vh;
+  padding-top: 20vh;
 }
 
 h1{
@@ -102,6 +109,7 @@ h3{
 .property-container{
   width: 80%;
   margin: 0 auto;
+
 }
 
 .properties{
@@ -159,4 +167,18 @@ h2{
   color: #fff;
   margin-bottom: 1.5em;
   border-radius: 0.5em;
+}
+
+.all-properties{
+  padding-top: 15vh
+}
+
+.pagy-nav{
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.pagy-nav a:hover{
+  background-color: rgba(221,174,10,1);
+  color: #fff;
 }

@@ -1,6 +1,7 @@
+<% @properties = properties %>
+
 <div class="property-container">
   <h2>Highlighted Properties</h2>
-  <% @properties = properties %>
   <% if @properties.any? %>
     <div class="properties">
       <% @properties.each do |property| %>
