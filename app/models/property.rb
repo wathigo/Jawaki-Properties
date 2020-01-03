@@ -1,3 +1,3 @@
 class Property < ApplicationRecord
-  belong_to :categories
+  belongs_to :category, dependent: :destroy
 end

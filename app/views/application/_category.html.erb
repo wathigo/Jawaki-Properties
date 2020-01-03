@@ -1,7 +1,7 @@
 <div class="category">
   <select class="category-dropdown">
     <%= Category.all.each do |category| %>
-      <option value=""><%= category.prop_type %></option>
+      <option value=""><%= category.prop_type.upcase %></option>
     <% end %>
 </select>
 </div>
