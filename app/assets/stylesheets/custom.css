@@ -68,6 +68,7 @@ body > .main-nav{
     ),
     url(home.jpg);
     background-size: cover;
+    background-attachment: fixed;
     width: 100vw;
     height: 100vh;
 }
@@ -183,6 +184,8 @@ h2{
   color: #fff;
 }
 
+/* reasons */
+
 .reason{
   width: 30%;
 }
@@ -203,4 +206,35 @@ h2{
   float: right;
   display: inline-block;
   width: 80%
+}
+
+/* signup */
+#contact{
+  padding-top: 4em;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(signup.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 60vh;
+    margin-bottom: 20vh;
+    margin-top: 5vh;
+    font-size: 1.2em;
+}
+
+#contact h3{
+  text-align: center;
+}
+
+.contact-contents{
+  width: 30%;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.contact-contents textarea, .contact-contents input{
+  width: 100%;
 }
