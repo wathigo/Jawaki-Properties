@@ -2,13 +2,14 @@
   <figure>
     <%= image_tag "prop.jpg" %>
     <div class="overlay">
-      <%= fa_icon("heart", class: "heart") %>
+      <%= link_to (fa_icon("heart", class: "heart")), likes_path(property), method: :post %>
     </div>
   </figure>
   <div class="prop-description">
     <h4> <%= property.name %></h4>
     <div class="price">
       <s>Ksh: <%= (property.price + property.price * 0.1).to_i %></s>
+      <br>
       <span>Ksh: <%= property.price %></span>
     </div>
     <div><%= property.address %></div>
