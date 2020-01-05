@@ -8,8 +8,8 @@
   <div class="prop-description">
     <h4> <%= property.name %></h4>
     <div class="price">
-      <s><%= property.price + property.price * 0.1 %></s>
-      <span><%= property.price %></span>
+      <s>Ksh: <%= (property.price + property.price * 0.1).to_i %></s>
+      <span>Ksh: <%= property.price %></span>
     </div>
     <div><%= property.address %></div>
   </div>
