@@ -2,7 +2,11 @@
   <figure>
     <%= image_tag "prop.jpg" %>
     <div class="overlay">
-      <%= link_to (fa_icon("heart", class: "heart")), likes_path(property), method: :post %>
+      <% if property.likes.find_by(user_id: current_user.id) %>
+            <%= link_to (fa_icon("heart", class: "unheart", :onclick => 'recordScroll()')), likes_path(property), method: :post %>
+      <% else %>
+            <%= link_to (fa_icon("heart", class: "heart", :onclick => 'recordScroll()')), likes_path(property), method: :post %>
+      <% end %>
     </div>
   </figure>
   <div class="prop-description">

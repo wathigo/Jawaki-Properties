@@ -2,9 +2,9 @@ class LikesController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    @liked = current_user.likes.find_by(property_id: params[:property_id])
+    @liked = current_user.likes.find_by(property_id: params[:format])
     if !@liked
-      current_user.likes.create(user_id: current_user.id, property_id: params[:property_id])
+      current_user.likes.create!(property_id: params[:format])
       redirect_back(fallback_location: root_path)
     else
       destroy
@@ -12,14 +12,9 @@ class LikesController < ApplicationController
   end
 
   def destroy
-    @property ||= Property.find(property_id)
-    @liked ||= @property.likes.find_by(user_id: current_user.id)
+    @liked ||= current_user.likes.find_by(property_id: params[:format])
     redirect_back(fallback_location: root_path) if @liked.delete
   end
 
-    private
-
-    def post_params
-    params.require(:like).permit(:property_id)
-  end
+  private
 end

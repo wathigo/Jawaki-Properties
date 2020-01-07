@@ -87,6 +87,10 @@ body > .main-nav{
   color: #000;
 }
 
+body > .main-nav ul li a, body > .main-nav .user a{
+  color: #000;
+}
+
 .home:hover{
   background-color: inherit;
 }
@@ -207,6 +211,12 @@ h3{
 }
 
 .heart{
+  color: #fff;
+  padding: 0.5em 0 0 0.8em;
+  font-size: 1.8em;
+}
+
+.unheart {
   color: $red;
   padding: 0.5em 0 0 0.8em;
   font-size: 1.8em;

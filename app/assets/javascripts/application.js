@@ -17,3 +17,20 @@
 //= require jquery3
 //= require popper
 //= require bootstrap
+
+
+let scrollTop = '0px';
+
+const recordScroll = () => {
+  let evt = window.event;
+  evt.preventDefault();
+  console.log('rcording...')
+  const el = document.querySelector('body')
+  scrollTop = el.scrollTop;
+}
+
+const rememberScroll = () => {
+  console.log('loaded', scrollTop)
+  const el = document.querySelector('body')
+  el.scrollTop = scrollTop;
+}
