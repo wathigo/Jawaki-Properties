@@ -1,19 +1,12 @@
-<p id="notice"><%= notice %></p>
+<% provide :head_tags do %>
+    <script>
+    document.addEventListener("DOMContentLoaded", function(){
+        initMap(<%=@property.latt%>, <%=@property.long%>)
+    });
+    </script>
+<% end %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @property.name %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @property.address %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @property.price %>
-</p>
-
-<%= link_to 'Edit', edit_property_path(@property) %> |
-<%= link_to 'Back', properties_path %>
+<div class="show-prop">
+  <%= render 'property', property: @property %>
+  <div id="map"></div>
+</div>

@@ -1,21 +1,23 @@
-<div class="property">
-  <figure>
-    <%= image_tag "prop.jpg" %>
-    <div class="overlay">
-      <% if property.likes.find_by(user_id: current_user.id) %>
-            <%= link_to (fa_icon("heart", class: "unheart", :onclick => 'recordScroll()')), likes_path(property), method: :post %>
-      <% else %>
-            <%= link_to (fa_icon("heart", class: "heart", :onclick => 'recordScroll()')), likes_path(property), method: :post %>
-      <% end %>
+<a href="/properties/<%= property.id %>">
+  <div class="property">
+    <figure>
+      <%= image_tag "prop.jpg" %>
+      <div class="overlay">
+        <% if property.likes.find_by(user_id: current_user.id) %>
+              <%= link_to (fa_icon("heart", class: "unheart", :onclick => 'recordScroll()')), likes_path(property), method: :post %>
+        <% else %>
+              <%= link_to (fa_icon("heart", class: "heart", :onclick => 'recordScroll()')), likes_path(property), method: :post %>
+        <% end %>
+      </div>
+    </figure>
+    <div class="prop-description">
+      <h4> <%= property.name %></h4>
+      <div class="price">
+        <s>Ksh: <%= (property.price + property.price * 0.1).to_i %></s>
+        <br>
+        <span>Ksh: <%= property.price %></span>
+      </div>
+      <div><%= property.address %></div>
     </div>
-  </figure>
-  <div class="prop-description">
-    <h4> <%= property.name %></h4>
-    <div class="price">
-      <s>Ksh: <%= (property.price + property.price * 0.1).to_i %></s>
-      <br>
-      <span>Ksh: <%= property.price %></span>
-    </div>
-    <div><%= property.address %></div>
   </div>
-</div>
+</a>

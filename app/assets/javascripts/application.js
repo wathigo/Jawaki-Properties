@@ -60,7 +60,7 @@ const rememberScroll = () => {
   el.scrollTop = document.cookie;
 }
 
-const animateScroll = (id, scrollTop=null) => {
+const animateScroll = (id) => {
   var target = id;
   animate(document.scrollingElement || document.documentElement, "scrollTop", "", 0, target.offsetTop, 1000, true);
 }
