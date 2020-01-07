@@ -25,12 +25,12 @@ const recordScroll = () => {
   let evt = window.event;
   evt.preventDefault();
   console.log('rcording...')
-  const el = document.querySelector('body')
-  scrollTop = el.scrollTop;
+  const el = document.querySelector('html')
+  document.cookie = el.scrollTop;
 }
 
 const rememberScroll = () => {
-  console.log('loaded', scrollTop)
-  const el = document.querySelector('body')
-  el.scrollTop = scrollTop;
+  console.log('loaded', document.cookie)
+  const el = document.querySelector('html')
+  el.scrollTop = document.cookie;
 }
