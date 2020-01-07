@@ -1,7 +1,17 @@
 <nav class="main-nav">
   <span class="logo"> <a class="home" href="/"><%= fa_icon 'home', class: 'home-icon' %></a> <b>JAWAKI PROPERTIES</b></span>
   <ul>
-    <li>HOME</li>
-    <li>CATEGORIES</li>
+    <li><a href="#property">PROPERTIES</a> </li>
+    <li><a href="#why_us">WHY US?</a></li>
+    <li><a href="#contact">CONTACT US</a></li>
   </ul>
+  <div class="user">
+    <% if signed_in? %>
+        <span class='user'><%= fa_icon 'user' %> </span>
+        <span><%= link_to "LOG OUT", destroy_user_session_path, method: :delete %></span>
+    <% else %>
+        <span><%= link_to "SIGN UP", new_user_registration_path %></span>
+        <span><%= link_to "LOG IN", new_user_session_path %></span>
+      <% end %>
+  </div>
 </nav>

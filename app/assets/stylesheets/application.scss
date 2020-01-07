@@ -51,14 +51,18 @@ body{
   padding-right: 2em;
   height: 1.5em;
   line-height: 1.5em;
+   a{
+     font-size: 0.8em;
+     color: #fff;
+   }
 }
 
-.main-nav span {
+.main-nav .logo {
   margin-right: 5vw;
   margin-left: 5vw;
   height: 1.5em;
   line-height: 1.5em;
-  font-size: 2em;
+  font-size: 1.6em;
 }
 
 .main-nav img {
@@ -66,6 +70,17 @@ body{
   height: 1.5em;
   line-height: 1.5em;
   margin-left: 5vw;
+}
+
+.user {
+  display: inline-block;
+  margin-left: 4rem;
+  font-size: 0.8em;
+}
+
+.user a{
+  color: #fff;
+  padding-right: 1.2em;
 }
 
 body > .main-nav{

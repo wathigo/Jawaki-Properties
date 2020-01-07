@@ -2,10 +2,9 @@ class LikesController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    @property = Property.find(property_id)
-    @liked = property.likes.find_by(user_id: current_user.id)
+    @liked = current_user.likes.find_by(property_id: params[:property_id])
     if !@liked
-      property.likes.create(user_id: current_user.id)
+      current_user.likes.create(user_id: current_user.id, property_id: params[:property_id])
       redirect_back(fallback_location: root_path)
     else
       destroy
