@@ -1,0 +1,25 @@
+
+  <div class="property">
+    <h4> <%= property.name %></h4>
+    <span><%= property.address %></span>
+    <div class="price">
+      <s>Ksh: <%= (property.price + property.price * 0.1).to_i %></s>
+      <span>Ksh: <%= property.price %></span>
+    </div>
+    <figure>
+      <%= image_tag "prop.jpg" %>
+      <div class="overlay">
+        <% if ( current_user != nil && property.likes.find_by(user_id: current_user.id)) %>
+              <%= link_to (fa_icon("heart", class: "unheart", :onclick => 'recordScroll()')), likes_path(property), method: :post %>
+        <% else %>
+              <%= link_to (fa_icon("heart", class: "heart", :onclick => 'recordScroll()')), likes_path(property), method: :post %>
+        <% end %>
+      </div>
+    </figure>
+    <div class="prop-description">
+      <h5>Description</h5>
+      <div class="description">
+        <p> <%= property.description %> </p>
+      </div>
+    </div>
+  </div>

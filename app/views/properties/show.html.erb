@@ -1,3 +1,5 @@
+<%= render "header" %>
+
 <% provide :head_tags do %>
     <script>
     document.addEventListener("DOMContentLoaded", function(){
@@ -7,6 +9,10 @@
 <% end %>
 
 <div class="show-prop">
-  <%= render 'property', property: @property %>
-  <div id="map"></div>
+  <%= render 'prop_show', property: @property %>
+  <div class="location-header">
+    <h5>Location</h5>
+  </div>
+  <div id="map">
+  </div>
 </div>
