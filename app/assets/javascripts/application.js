@@ -29,35 +29,32 @@ const recordScroll = () => {
   document.cookie = el.scrollTop;
 }
 
-
-
-
-const animate = (elem, style, unit, from, to, time, prop) => {
-    if (!elem) {
-        return;
-    }
-    let start = new Date().getTime(),
-        timer = setInterval(function () {
-            let step = Math.min(1, (new Date().getTime() - start) / time);
-            if (prop) {
-                elem[style] = (from + step * (to - from))+unit;
-            } else {
-                elem.style[style] = (from + step * (to - from))+unit;
-            }
-            if (step === 1) {
-                clearInterval(timer);
-            }
-        }, 25);
-    if (prop) {
-          elem[style] = from+unit;
-    } else {
-          elem.style[style] = from+unit;
-    }
-}
-
 const rememberScroll = () => {
   const el = document.querySelector('html')
-  el.scrollTop = document.cookie;
+  el.scrollTop = document.cookie.split(' ').pop();
+}
+
+const animate = (elem, style, unit, from, to, time, prop) => {
+  if (!elem) {
+      return;
+  }
+  let start = new Date().getTime(),
+      timer = setInterval(function () {
+          let step = Math.min(1, (new Date().getTime() - start) / time);
+          if (prop) {
+              elem[style] = (from + step * (to - from))+unit;
+          } else {
+              elem.style[style] = (from + step * (to - from))+unit;
+          }
+          if (step === 1) {
+              clearInterval(timer);
+          }
+      }, 25);
+  if (prop) {
+        elem[style] = from+unit;
+  } else {
+        elem.style[style] = from+unit;
+  }
 }
 
 const animateScroll = (id) => {
