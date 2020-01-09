@@ -31,7 +31,10 @@ const recordScroll = () => {
 
 const rememberScroll = () => {
   const el = document.querySelector('html')
-  el.scrollTop = document.cookie.split(' ').pop();
+  let scrollTop = document.cookie.split(' ').pop()
+  document.cookie = document.cookie.split(' ').pop().toString();
+  el.scrollTop = scrollTop;
+  document.cookie = 0;
 }
 
 const animate = (elem, style, unit, from, to, time, prop) => {
