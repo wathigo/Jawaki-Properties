@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2020_01_07_120859) do
     t.string "name"
     t.string "address"
     t.string "status"
+    t.string "description"
     t.integer "price"
     t.float "latt"
     t.float "long"

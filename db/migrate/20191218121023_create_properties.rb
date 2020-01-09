@@ -5,6 +5,7 @@ class CreateProperties < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :address
       t.string :status
+      t.string :description
       t.integer :price
       t.float :latt
       t.float :long

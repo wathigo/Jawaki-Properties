@@ -1,9 +1,9 @@
-<a href="/properties/<%= property.id %>">
+
   <div class="property">
     <figure>
       <%= image_tag "prop.jpg" %>
       <div class="overlay">
-        <% if property.likes.find_by(user_id: current_user.id) %>
+        <% if ( current_user != nil && property.likes.find_by(user_id: current_user.id)) %>
               <%= link_to (fa_icon("heart", class: "unheart", :onclick => 'recordScroll()')), likes_path(property), method: :post %>
         <% else %>
               <%= link_to (fa_icon("heart", class: "heart", :onclick => 'recordScroll()')), likes_path(property), method: :post %>
@@ -18,6 +18,12 @@
         <span>Ksh: <%= property.price %></span>
       </div>
       <div><%= property.address %></div>
+      <% if request.env['PATH_INFO'] == property_path(property) %>
+        <div class="description">
+          <p> <%= property.description %> </p>
+        </div>
+      <% else %>
+        <%= link_to (fa_icon('location-arrow')), property_path(property), method: :get, class: 'property-show'%>
+      <% end %>
     </div>
   </div>
-</a>
